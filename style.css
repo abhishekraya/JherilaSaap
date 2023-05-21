@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #E3F2FD;
+}
+.gameon{
+    width: 70vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #05122c;
+    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+}
+
+.scoreboard 
+{
+    height: 30px;
+    width: 70vmin;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(43, 168, 225);
+    flex-direction: row;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+.game 
+{
+    background-color: #05122c;
+    width: 70vmin;
+    height: 65vmin;
+    overflow: hidden;
+    justify-content: center;
+    border:2px rgb(19, 19, 20) solid;
+    border-radius: 5px;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    margin: 0 auto;
+}
+
+.game .food 
+{
+    background-image: linear-gradient(red,blue);
+    border-radius: 20%;
+    box-shadow: 2px 2px 20px 2px rgb(172, 28, 102);
+}
+ .game .sFood{
+    background-color: red;
+}
+
+.game .head 
+{
+    background-color: rgb(15, 202, 46);
+    border: 1px solid yellow;
+    border-radius:30%;
+}
+
+.buton 
+{
+    display: none;
+    margin:0 auto;
+    height: 60px;
+    width: calc(100%/4);
+}
+
+@media only screen and (max-width: 500px) {
+    .but 
+    {
+        /* height: 60px; */
+        width: 70vmin;
+        display:flex;
+        background-color: azure; 
+        justify-content:space-between;
+    }
+    .buton 
+    {
+        display: block;
+    }
+    .gameon{
+        width:100vmin;
+        height:100vmin;
+    }
+    .game{
+        height:100vmin;
+        width:100vmin;
+    }
+    .scoreboard{
+        width:100%;
+    }
+}
